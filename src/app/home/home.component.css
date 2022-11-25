@@ -1,0 +1,49 @@
+body {background-color: rgb(237, 237, 237);
+} 
+.navbar{
+    text-align: center;
+}
+.seller{
+    padding: 20px;
+}
+
+.seller>table>tr>td{
+    width: 6cm;
+    
+}
+
+.seller>table>tr>td>input{
+    width: 150px;
+}
+.buyer{
+    padding: 20px;
+}
+
+.buyer>table>tr>td{
+    
+    width: 6cm;
+    
+}
+.buyer>table>tr>td>label{
+     
+}
+.buyer>table>tr>td>input{
+    width: 150px;
+    
+}
+.flex{
+
+    display: flex;
+}
+
+.buyer{
+    padding: 20px;
+}
+.text{
+    padding: 20px;
+    height: 500px;
+    
+}
+.total{
+    padding: 20px;
+}

@@ -1,0 +1,150 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body >
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0">Milk Managment System</span>
+    </div>
+  </nav>
+  <div class="flex">
+    <div class="seller">
+
+      <!-- -----------seller section--------------- -->
+
+      <h5>Seller</h5>
+      <table border="1">
+        <tr>
+
+          <td>
+            <label for="fname">User id:</label><br />
+            <input [(ngModel)]="input1" type="" />
+          </td>
+          <td>
+            <label for="fname">Date:</label><br />
+            <input [(ngModel)]="input01" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fname">Quantity:</label><br />
+            <input type="number" [(ngModel)]="input2" />
+          </td>
+          <td>
+            <label for="fname">Fat:</label><br />
+            <input type="number" [(ngModel)]="input3" />
+          </td>
+          <td>
+            <label for="fname">Amount:</label><br />
+            <input [(ngModel)]="result" type="number" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button (click)="seller()">Amount</button>
+          </td>
+          <td>
+          <td>
+            <button (click)="clear()">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ------------------buyer section----------------- -->
+    <div class="buyer">
+
+      <h5>Buyer</h5>
+      <table border="1">
+        <tr>
+          <td>
+            <label for="fname">User id:</label><br />
+            <input [(ngModel)]="input4" type="" />
+          </td>
+          <td>
+            <label for="fname">Date:</label><br />
+            <input [(ngModel)]="input04" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fname">Quantity:</label><br />
+            <input type="number" [(ngModel)]="input5" />
+          </td>
+
+          <td>
+            <label for="fname">Amount:</label><br />
+            <input [(ngModel)]="result1" type="number" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button (click)="buyer()">Amount</button>
+          </td>
+          <td>
+            <button (click)="clear()">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- ------------total collection section-------------- -->
+  <div class="total">
+    <p><b>Total Collection</b></p>
+    <table border="1" width="100%">
+      <tr>
+        <td colspan="2">
+          <label for="fname">Buying:</label><br />
+          <input type="number" [(ngModel)]="input6" />
+        </td>
+        <td colspan="2">
+          <label for="fname">Selling:</label><br />
+          <input type="number" [(ngModel)]="input7" />
+        </td>
+        <td colspan="4">
+          <label for="fname">Total:</label><br />
+          <input [(ngModel)]="result2" type="number" disabled />
+        </td>
+    </table>
+  </div>
+
+  <!-- ------------------todays record------------------ -->
+
+  <div class="text">
+    <p><b>Todays record</b></p>
+    <table class="table table-light mt-3" border="1">
+      <thead class="thead-light">
+        <tr>
+          <th>user Name</th>
+          <th>Quantity</th>
+          <th>FAt</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let i of userId">{{i}} </td>
+          <td *ngFor="let q of Quantity">{{q}} </td>
+          <td *ngFor="let f of fat">{{f}} </td>
+          <td *ngFor="let a of amount">{{a}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>log in</title>
+    <!-- <link rel="stylesheet" href="login.css" /> -->
+    <!-- <link rel="shortcut icon" type="image" href="./img-res/contact-icon.png" /> -->
+  </head>
+  <body>
+    
+    <div class = "name">
+       <h1> <pre>
+          MILK MANAGEMENT SYSTEM </pre>
+      </h1>
+    </div>
+    <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="user-box">
+          <input [(ngModel)]="userId" type="text" name="" [ngModelOptions]="{standalone: true}" placeholder="{{message}}"/>
+
+          <label>Username</label>
+        </div>
+        <p>{{message}}</p>
+        <div class="user-box">
+          <input [(ngModel)]="password" type="password" name="" [ngModelOptions]="{standalone: true}" />
+          <label>Password</label>
+        </div>
+        <button (click) ="signIn()">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
